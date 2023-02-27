@@ -1,0 +1,295 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+
+li { list-style: none; }
+
+.dikey {
+
+    width: 1px;
+    height: 40px;
+    align-self: center;
+    color: beige;
+}
+
+nav {
+
+    width: 100%;
+    background-color: rgb(24, 102, 102);
+    display: flex;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1;
+}
+
+nav ul {
+
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+nav ul:first-child { margin-left: 1rem; }
+
+nav ul li { display: inline-block; }
+
+nav ul li a { position: relative; margin-left: 8px;}
+
+nav ul li a {
+
+    display: inline-block;
+    padding: 1rem;
+    color: beige;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+nav ul li a::after {
+
+    content: "";
+    position: absolute;
+    background-color: beige;
+    height: 2px;
+    width: 0;
+    bottom: -10px;
+    transition: 0.4s;
+    left: 0;
+}
+
+nav ul li a:hover::after { width: 100%; }
+
+/*nav bitiş*/
+
+.container {
+
+  background-color: beige;
+  text-align: center;
+  padding: 80px;
+  height: 120vh;
+}
+
+.container-portfolio {
+
+  background-color: #016a57b3;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 120vh;
+  align-items: center;
+}
+
+#anasayfa img {
+
+    height: 250px;
+    margin-top: 65px;
+    border-radius: 75px;
+}
+
+
+.aciklama {
+
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 18px;
+    margin-top: 80px;
+}
+
+.aciklama p { 
+    
+    color:rgb(24, 102, 102); 
+    text-shadow: 2px 4px 11px rgba(0,0,0,0.55);
+}
+
+.aciklama p::first-letter {
+
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.tasarimlar {
+
+  margin: 10px;
+  margin-top: 80px;
+}
+
+.logolar {
+
+  margin: 10px;
+  margin-top: 80px;
+}
+
+.iletisim {
+
+  background-color: #211f85;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mail-telefon {
+
+  display: flex;
+}
+
+.mail-telefon i {
+
+  color: beige;
+  display: flex;
+  justify-content: center;
+  padding: 70px;
+}
+
+.mail {
+
+  text-align: center;
+  color: beige;
+}
+
+.telefon {
+
+  text-align: center;
+  color: beige;
+}
+
+.mail-telefon p {
+
+  font-family: 'Oxygen', sans-serif;
+  text-shadow: 2px 4px 11px rgba(0,0,0,0.55);
+  color: beige;
+}
+
+/*footer*/
+
+footer {
+
+  width: 100%;
+  background-color: rgb(24, 102, 102);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.icons {
+
+    flex-grow: 1;
+    align-self: center;
+}
+
+.icons {
+
+    display: flex;
+    justify-content: center;
+}
+
+.icons a i {
+
+    align-self: center;
+    padding: 1rem;
+    color: beige ;
+}
+
+#programlar h4 {
+
+  font-family: 'Oxygen', sans-serif;
+  color: rgb(24, 102, 102);
+  width: 50%;
+  border-bottom: 2px solid;
+  text-align: center;
+  padding: 20px;
+}
+
+#programlar {
+
+  text-align: -webkit-center;
+}
+
+#programlar img {
+
+  height: 100px;
+  width: 100px;
+}
+
+/*slideshow*/
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: beige;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: rgb(24, 102, 102);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

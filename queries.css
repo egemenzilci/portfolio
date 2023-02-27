@@ -1,0 +1,22 @@
+@media screen and (max-width: 500px) {
+
+    .container {
+
+        height: 130vh;
+    }
+    
+    .container #anasayfa img {
+
+        height: 300px;
+    }
+
+    .mail-telefon {
+
+        display: block;
+      }
+
+      .iletisim {
+
+        height: 90vh;
+      }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./queries.css">
+
+    <script src="https://kit.fontawesome.com/f4b79a8da6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li> <a href="#anasayfa">Anasayfa</a> </li>
+            <hr class="dikey">
+            <li> <a href="#portfolio" style="transition: 1s;">Görseller</a> </li>
+            <hr class="dikey">
+            <li> <a href="#iletisim">İletişim</a> </li>
+        </ul>
+    </nav>
+
+    <div class="container" id="anasayfa">
+
+        <img src="./medya/profil.jpg" alt="profil_resmi">
+
+        <div class="aciklama">
+            <p>
+                Merhaba, adım Ege.
+                Yazılıma meraklı, gelişime açık, yenilikleri seven birisiyim.
+                Grafikerlik ve SEO uzmanlığı yaptıktan sonra, hayatımı yazılımcı olarak devam ettirmeyi amaçlıyorum.
+            </p>
+        </div>
+
+        <br><br><br>
+
+        <div id="programlar">
+
+            <h4>Hangi Programları Kullanıyorum</h4>
+
+            <img src="./medya/aiicon.png" alt="illustrator_logo">
+
+            <img src="./medya/psicon.png" alt="photoshop_logo">
+            
+        </div>
+
+    </div>
+
+    <div class="container-portfolio" id="portfolio">
+
+        <div class="tasarimlar">
+  
+          <div class="slideshow-container">
+  
+              <div class="mySlides fade">
+                <img src="./medya/tasarim1.JPG" style="width:100%" alt="tasarim_1">
+                <div class="text" style="opacity: 0.5;">EgmGraph</div>
+              </div>
+              
+              <div class="mySlides fade">
+                <img src="./medya/tasarim2.JPG" style="width:100%" alt="tasarim_2">
+                <div class="text" style="opacity: 0.5;">EgmGraph</div>
+              </div>
+              
+              <div class="mySlides fade">
+                <img src="./medya/tasarim3.JPG" style="width:100%" alt="tasarim_3">
+                <div class="text" style="opacity: 0.5;">EgmGraph</div>
+              </div>
+  
+              <div class="mySlides fade">
+                  <img src="./medya/tasarim4.JPG" style="width:100%" alt="tasarim_4">
+                  <div class="text" style="opacity: 0.5;">EgmGraph</div>
+              </div>
+              
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+              
+          </div>
+              <br>
+              
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span>
+              </div>
+        </div>
+    </div>
+
+    <div class="iletisim" id="iletisim">
+
+      <div class="mail-telefon">
+
+        <div class="mail">
+          <i class="fa-solid fa-envelope fa-7x"></i>
+          <p>egemenzilci@gmail.com</p>
+        </div>
+        <div class="telefon">
+          <i class="fa-brands fa-whatsapp fa-7x"></i>
+          <p>+90 0538 826 32 92</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+        
+        <div class="icons">
+
+            <a href="https://www.facebook.com/ege.menzilci" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+            <hr class="dikey">
+            <a href="https://twitter.com/egemenzilci" target="_blank"><i class="fa-brands fa-twitter fa-2x"></i></a>
+            <hr class="dikey">
+            <a href="https://www.instagram.com/egemenzilci/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+        </div>
+
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+</body>
+
+</html>
